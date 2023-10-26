@@ -9,7 +9,7 @@ format(topic, text content)</br>
 1_deal-160_deal is the dealed original audio data</br>
 1_MCE-160_MCE is the training format audio data</br>
 
-The MCE Dataset is collected by 10 student from HKUST, **each students have their own name rule and their audio file have different types.**
+The MCE Dataset is collected by 10 students from HKUST, **each students have their own name rule and their audio file have different types.**
 
 ### `Check_OriginData_num.py`
 Check if aduio file numbers equal to text row numbers, ensure the data number is correct
