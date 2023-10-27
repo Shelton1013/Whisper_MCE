@@ -11,6 +11,12 @@ format(topic, text content)</br>
 
 The MCE Dataset is collected by 10 students from HKUST, **each students have their own name rule and their audio file have different types.**
 
+## Data Cleaning
+- step 1: Check the audio file nums(Check_OriginData_num.py)
+- setp 2: Prepare for audio file rename(Data_Dislocation.py)
+- step 3: Rename the audio file(Rename_dataset.py)
+- step 4: Unite the audio format(Unified_dataset_format.py)
+
 ### `Check_OriginData_num.py`
 Check if aduio file numbers equal to text row numbers, ensure the data number is correct
 
