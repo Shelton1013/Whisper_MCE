@@ -32,7 +32,38 @@ Rename audio file to have unified name rule
 
 ---
 
+
 ### `Unified_dataset_format.py`
 unite the audio type(.wav), sample rate(16,000hz), number of channels(mono)
 
 ---
+
+## Environment
+```bash
+pip install -r requirements.txt
+```
+
+## Upload File
+https://github.com/runpod/runpodctl
+
+```bash
+wget --quiet --show-progress https://github.com/Run-Pod/runpodctl/releases/download/v1.10.0/runpodctl-linux-amd -O runpodctl && chmod +x runpodctl && sudo cp runpodctl /usr/bin/runpodctl
+```
+
+Windows send file
+```bash
+.\runpodctl send data.txt
+```
+
+Linux receive file
+```bash
+runpodctl receive <code from windows>
+```
+
+Unzip
+```bash
+apt-get install zip -y
+zip -FF Finetune.zip --out ft.zip -fz -y
+unzip ft.zip
+```
+
