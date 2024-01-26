@@ -1,4 +1,9 @@
 # Whisper_MCE
+Use our fine-tuned Whisper-MCE for speech recoginition
+```bash
+python whisper_mce.py --model_path "your model path" --audio_path "your test audio path"
+```
+
 
 ## MCE Dataset
 MCE Dataset folder has two folders:</br>
