@@ -1,7 +1,7 @@
 # Whisper_MCE
-Use our fine-tuned Whisper-MCE for speech recoginition
+Use our fine-tuned Whisper-MCE for speech recognition
 ```bash
-python whisper_mce.py --model_path "your model path" --audio_path "your test audio path"
+python Whisper_mce.py --model_path "your model path" --audio_path "your test audio path"
 ```
 
 
