@@ -1,15 +1,23 @@
 from Deal_Dataset import MCE_dataset
 import os
+import argparse
 
-audio_folder_path = r'E:\Whisper-base-local\data\MCE Datasets'
-text_folder_path = r'E:\Whisper-base-local\data\csv'
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--audio_folder_path", help="MCE dataset audio files path")
+parser.add_argument("--text_folder_path", help="MCE dataset text files path")
+args = parser.parse_args()
+
+audio_folder_path = args.audio_folder_path
+text_folder_path = args.text_folder_path
+
 
 MCE_dataset = MCE_dataset(audio_folder_path, text_folder_path)
 
 
 # unified dataset format
 # First, audio type wav, sample rate 16,000 hz
-for i in range(86, 161):
+for i in range(130, 131):
     audio_folder_name = audio_folder_path + f"""\{i}\\"""
     new_path = audio_folder_path + f"""\{i}_deal\\"""
     aduio_file_list = os.listdir(audio_folder_name)
@@ -20,7 +28,7 @@ for i in range(86, 161):
 
 
 # Second change to mono
-for i in range(86, 161):
+for i in range(130, 131):
     input_file_folder = audio_folder_path + f"""\\{i}_deal\\"""
     audio_file_list = os.listdir(input_file_folder)
     for audio in audio_file_list:

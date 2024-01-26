@@ -3,10 +3,10 @@ import pandas as pd
 
 
 class Data_Generate():
-    def __init__(self):
-        openai.api_type = "azure"
-        openai.api_base = "https://inpcgpt4.openai.azure.com/"
-        openai.api_key = "ba87cfb6635d471eb1513ce55901706e"
+    def __init__(self, api_type, api_base, api_key):
+        openai.api_type = api_type
+        openai.api_base = api_base
+        openai.api_key = api_key
 
     def generate(self, topic_dict, save_csv_path):
         data_title = [["Topic", "Instance"]]
@@ -21,7 +21,7 @@ class Data_Generate():
                                     """
 
             response = openai.ChatCompletion.create(
-                    engine="gpt4", # engine = "deployment_name".
+                    engine="gpt4",  # choose the model type
                     api_version="2023-05-15",
                     messages=[
                         {"role": "system",

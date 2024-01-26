@@ -2,13 +2,16 @@ import os
 import pandas as pd
 import re
 import nltk
-folder_path = r'E:\Whisper-base-local\data\csv'
+import argparse
 
-"""
-用于统计GPT4数据生成的分布情况（英文和粤语繁体分别有多少个字）
-"""
+parser = argparse.ArgumentParser()
+parser.add_argument("--text_folder_path", help="MCE text file path")
+args = parser.parse_args()
 
-file_list = os.listdir(folder_path)
+text_folder_path = args.text_folder_path
+
+
+file_list = os.listdir(text_folder_path)
 
 count_dict = {"天氣_z": 0, "天氣_e": 0,
               "食物_z": 0, "食物_e": 0,
@@ -41,7 +44,7 @@ def count_english_words(string):
 chinese_count = 0
 english_count = 0
 for file_name in file_list:
-    file_name = folder_path + r'\\' +file_name
+    file_name = text_folder_path + r'\\' +file_name
     read_csv_path = file_name
     df = pd.read_csv(read_csv_path, encoding='GBK')
     for index, row in df.iterrows():

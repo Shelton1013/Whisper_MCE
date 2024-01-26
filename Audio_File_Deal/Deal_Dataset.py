@@ -5,10 +5,8 @@ from pydub import AudioSegment
 
 
 """
-1. 检查音频文件的数量与csv是否对应
-2. 统一文件名称
-3. 统计音频文件的长度
-4. 制作数据集
+1. Check the num of audio and csv files
+2. unify the dataset format
 """
 
 class MCE_dataset():
@@ -19,7 +17,7 @@ class MCE_dataset():
 
     def check_dataset_num(self, start, end):
         """
-        check if aduio file num == text num, ensure the data num is correct
+        check if aduio file num == text num, ensure the MCE num is correct
         :param start: start folder location
         :param end: end folder location
         :return:
@@ -138,7 +136,13 @@ class MCE_dataset():
         print(f"Current sample rate: {sample_rate} Hz")
 
 
-    def count_audio_len(self, audio_folder_path):
-        audio_file_list = os.listdir(audio_folder_path)
-
+    def get_audio_length(self, file_path):
+        """
+        count the audio length
+        :param file_path: audio file path
+        :return: audio length
+        """
+        audio = AudioSegment.from_file(file_path)
+        duration_in_sec = len(audio) / 1000
+        return duration_in_sec
 

@@ -1,7 +1,7 @@
 import pandas as pd
 import random
 
-from Data_Generate import Data_Generate
+from MCE.Text_Data_Generation.Data_Generate import Data_Generate
 
 start_epoch = 100
 end_epoch = 160
@@ -37,4 +37,4 @@ for i in range(start_epoch, end_epoch):
     save_csv_path = f"""./csv/data_{i+1}.csv"""
 
     data_generate.generate(topic_dict, save_csv_path)
-    print(f"""{save_csv_path}写入成功""")
+    print(f"""{save_csv_path}save successfully""")

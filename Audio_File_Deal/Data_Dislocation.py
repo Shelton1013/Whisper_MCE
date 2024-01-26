@@ -1,9 +1,17 @@
 from Deal_Dataset import MCE_dataset
+import argparse
 
-audio_folder_path = r'E:\Whisper-base-local\data\MCE Datasets'
-text_folder_path = r'E:\Whisper-base-local\data\csv'
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--audio_folder_path", help="MCE dataset audio files path")
+parser.add_argument("--text_folder_path", help="MCE dataset text files path")
+args = parser.parse_args()
+
+audio_folder_path = args.audio_folder_path
+text_folder_path = args.text_folder_path
 
 MCE_dataset = MCE_dataset(audio_folder_path, text_folder_path)
+
 
 # 10 people collect this dataset where each people have their own name rule
 # handle dislocation for folder_117-130, just change the start num

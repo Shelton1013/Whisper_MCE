@@ -1,13 +1,26 @@
-import pandas as pd
-from Data_Generate import Data_Generate
+from MCE.Text_Data_Generation.Data_Generate import Data_Generate
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--api_type", help="GPT-4 API type")
+parser.add_argument("--api_base", help="GPT-4 API base")
+parser.add_argument("--api_key", help="GPT-4 API key")
+parser.add_argument("--save_csv_path", help="GPT-4 API key")
+
+args = parser.parse_args()
+
+api_type = args.api_type
+api_base = args.api_base
+api_key = args.api_key
+save_csv_path = args.save_csv_path
 
 
 """
-生成原始数据，需要人工手写，topic_dict，生成一批数据后，放入csv，
-对这个csv采样，抽取其中的数据，作为新topic_dict的instance
-该代码为原始数据集生成
+Generate Original Data(topic_dict) which needs to be hand written
+Store the generated data in csv file
+Sample new data from this generated csv as the new instance of the topic_dict
 """
-data_generate = Data_Generate()
+data_generate = Data_Generate(api_type, api_base, api_key)
 
 """
 topic_dict = {"天氣": ["你睇咗今日嘅weather forecast未？話係會有heavy rain，記得帶雨傘出門啊！", "睇落去，今晚嘅sky好clear，應該可以見到好多stars。"],
@@ -33,9 +46,6 @@ topic_dict = {"健康同健身": ["我成日都去gym，係為咗keep fit，健�
               }
 
 
-
-save_csv_path = './csv/data_100.csv'
-
 data_generate.generate(topic_dict, save_csv_path)
-print(f"""{save_csv_path}写入成功""")
+print(f"""{save_csv_path}save successfully""")
 

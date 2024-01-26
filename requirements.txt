@@ -1,0 +1,11 @@
+torch==2.0.0 --index-url https://download.pytorch.org/whl/cu118
+torchvision==0.15.1 --index-url https://download.pytorch.org/whl/cu118
+torchaudio==2.0.1 --index-url https://download.pytorch.org/whl/cu118
+datasets>=2.6.1
+transformers==4.27.3
+librosa
+evaluate>=0.3.0
+jiwer
+gradio
+pandas
+tensorboard
