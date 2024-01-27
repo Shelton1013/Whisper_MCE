@@ -7,6 +7,8 @@ You can download the [MCE Dataset from the Google cloud](https://drive.google.co
 
 Our fine-tuned [Whisper-MCE](https://drive.google.com/file/d/14_IFvi0z8zHNJGYetpW5GHxbS0z6p0dt/view?usp=sharing)</br>
 
+Baseline: [Whisper](https://github.com/openai/whisper)
+
 Use our fine-tuned Whisper-MCE for speech recognition
 ```bash
 python Whisper_mce.py --model_path "your model path" --audio_path "your test audio path"
