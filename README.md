@@ -62,3 +62,4 @@ apt-get install zip -y
 zip -FF Finetune.zip --out ft.zip -fz -y
 unzip ft.zip
 ```
+![appendix](./appendix.png)
