@@ -7,6 +7,7 @@ python Whisper_mce.py --model_path "your model path" --audio_path "your test aud
 
 
 ## MCE Dataset
+[MCE Dataset](https://drive.google.com/file/d/1CFgHxTzYBKnIkRVBdCwlJXahZq3Zi87B/view?usp=sharing)</br>
 MCE Dataset folder has two folders:</br>
 - Audio: mixed Cantonese and English audio files, 160 audio folders</br>
 1-160 is the original audio data</br>
