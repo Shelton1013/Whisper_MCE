@@ -10,7 +10,7 @@ we present the impressive results of **Whisper-MCE**, our fine-tuned Whisper, wh
 
   
 ## 📊 MCE Dataset
-You can download the [MCE Dataset from the Google cloud](https://drive.google.com/file/d/1CFgHxTzYBKnIkRVBdCwlJXahZq3Zi87B/view?usp=sharing).
+You can download the [MCE Dataset from the Google cloud]((https://drive.google.com/file/d/1CFgHxTzYBKnIkRVBdCwlJXahZq3Zi87B/view?usp=sharing)).
 
 MCE Dataset folder has two folders:</br>
 - Audio: mixed Cantonese and English audio files, 160 audio folders</br>
