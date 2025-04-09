@@ -54,12 +54,13 @@ We are currently working on a more extensive code-switching dataset [SwitchiLing
 ## 📚Citation
 
 ```bibtex
-@article{xie2023whisper,
-  title={Whisper-mce: Whisper model finetuned for better performance with mixed languages},
-  author={Xie, Peng and Liu, XingYuan and Chen, ZiWei and Chen, Kani and Wang, Yang},
-  journal={arXiv preprint arXiv:2310.17953},
-  volume={6},
-  year={2023}
+@inproceedings{xie2025developing,
+  title={Developing a Multilingual Dataset and Evaluation Metrics for Code-Switching: A Focus on Hong Kong’s Polylingual Dynamics},
+  author={Xie, Peng and Chen, Kani},
+  booktitle={ICASSP 2025-2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={1--5},
+  year={2025},
+  organization={IEEE}
 }
 ```
 
