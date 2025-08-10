@@ -28,7 +28,7 @@ The MCE Dataset is collected by students from HKUST, **each students have their 
 ## 🏋️ Whisper-MCE
 
 ## Requirements
-1. Clone this repository and navigate to MMed-RAG folder
+1. Clone this repository and navigate to Whisper_MCE folder
 ```bash
 git clone git@github.com:Shelton1013/Whisper_MCE.git
 cd Whisper_MCE
